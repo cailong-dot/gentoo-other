@@ -1,0 +1,11 @@
+DEFINED_PHASES=install
+DESCRIPTION=Your One-Stop Publication Workbench.
+EAPI=8
+HOMEPAGE=https://github.com/Zettlr/Zettlr
+KEYWORDS=~amd64
+LICENSE=GPL-3
+RDEPEND=sys-fs/fuse:0
+RESTRICT=strip
+SLOT=0
+SRC_URI=https://git.xfj0.cn/https://github.com/Zettlr/Zettlr/releases/download/v2.3.0/Zettlr-2.3.0-x86_64.AppImage
+_md5_=d5f00dae06691ff3e936ea7b25a2a653
