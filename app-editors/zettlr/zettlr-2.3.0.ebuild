@@ -1,24 +1,50 @@
-# Copyright 1999-2023 Gentoo Foundation
+# Copyright 2021-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
 
-DESCRIPTION="Your One-Stop Publication Workbench."
-HOMEPAGE="https://github.com/Zettlr/Zettlr"
+inherit unpacker xdg-utils
 
-SRC_URI="https://git.xfj0.cn/https://github.com/Zettlr/Zettlr/releases/download/v${PV}/Zettlr-2.3.0-x86_64.AppImage"
-KEYWORDS="~amd64"
+DESCRIPTION="A Markdown Editor for the 21st century."
+HOMEPAGE="https://www.zettlr.com/"
+SRC_URI="https://github.com/Zettlr/Zettlr/releases/download/v${PV}/Zettlr-${PV}-amd64.deb"
 
 LICENSE="GPL-3"
 SLOT="0"
-RESTRICT="strip"
+KEYWORDS="~amd64"
 
-RDEPEND="sys-fs/fuse:0"
+DEPEND=""
+RDEPEND="${DEPEND}
+	dev-libs/expat
+	net-libs/gnutls:0
+	dev-libs/nspr
+	dev-libs/nss
+	media-libs/alsa-lib
+	media-libs/freetype
+	sys-apps/dbus
+	x11-libs/gtk+:3[cups]
+"
+BDEPEND=""
 
+RESTRICT="mirror"
 S="${WORKDIR}"
 
-QA_PREBUILT="*"
+src_unpack() {
+	unpack_deb ${A}
+}
 
 src_install() {
-	newbin "${DISTDIR}/Zettlr-2.3.0-x86_64.AppImage" zettlr
+	cp -a * "${ED}/"
+	mkdir -p "${ED}/usr/bin"
+	ln -sr ../../opt/Zettlr/Zettlr "${ED}/usr/bin/Zettlr"
+}
+
+pkg_postrm() {
+	xdg_desktop_database_update
+	xdg_icon_cache_update
+}
+
+pkg_postinst() {
+	xdg_desktop_database_update
+	xdg_icon_cache_update
 }
