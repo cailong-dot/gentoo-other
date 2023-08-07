@@ -1,0 +1,11 @@
+DEFINED_PHASES=install
+DESCRIPTION=The new version of the official linux-qq
+EAPI=8
+HOMEPAGE=https://im.qq.com/linuxqq/index.shtml
+KEYWORDS=-* ~amd64 ~arm64
+LICENSE=Tencent
+RDEPEND=sys-fs/fuse:0
+RESTRICT=strip
+SLOT=0
+SRC_URI=https://dldir1.qq.com/qqfile/qq/QQNT/ad5b5393/linuxqq_3.1.2-13107_x86_64.AppImage
+_md5_=3810ce07fff8e3b2af82d189b72ec63b

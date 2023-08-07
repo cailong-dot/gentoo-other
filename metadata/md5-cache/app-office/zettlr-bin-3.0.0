@@ -1,0 +1,13 @@
+DEFINED_PHASES=install unpack
+DESCRIPTION=A Markdown Editor for the 21st century.
+EAPI=8
+HOMEPAGE=https://www.zettlr.com/
+INHERIT=unpacker xdg-utils
+KEYWORDS=~amd64
+LICENSE=GPL-3
+RDEPEND=sys-fs/fuse:0
+RESTRICT=strip
+SLOT=0
+SRC_URI=https://download.njuu.cf/Zettlr/Zettlr/releases/download/v3.0.0-beta.7/Zettlr-3.0.0-beta.7-x86_64.AppImage
+_eclasses_=multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	0c8a0b0d318eb5d5180d114bd3f6592b	multilib	c19072c3cd7ac5cb21de013f7e9832e0	unpacker	aa6a4e924009232d8b78b31e932c30b5	xdg-utils	baea6080dd821f5562d715887954c9d3
+_md5_=9a8f972bd8d81b9bb13edba4ba97a965
