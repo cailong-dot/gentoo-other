@@ -3,8 +3,6 @@
 
 EAPI=8
 
-inherit unpacker xdg-utils
-
 DESCRIPTION="A Markdown Editor for the 21st century."
 HOMEPAGE="https://www.zettlr.com/"
 SRC_URI="https://download.njuu.cf/Zettlr/Zettlr/releases/download/v3.0.0-beta.7/Zettlr-3.0.0-beta.7-x86_64.AppImage"
