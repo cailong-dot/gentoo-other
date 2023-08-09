@@ -9,7 +9,7 @@ HOMEPAGE="https://www.texstudio.org https://github.com/texstudio-org/texstudio"
 # SRC_URI="https://github.com/texstudio-org/texstudio/archive/${MY_PV}.tar.gz -> ${P}.tar.gz"
 SRC_URI="https://mirrors.tuna.tsinghua.edu.cn/github-release/texstudio-org/texstudio/LatestRelease/texstudio-${PV}-x86_64.AppImage"
 
-LICENSE="GPL-2"
+LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~arm64 ~ppc ~ppc64 x86"
 
