@@ -10,7 +10,7 @@ SRC_URI="https://download.calibre-ebook.com/${PV}/calibre-${PV}-x86_64.txz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64"
 IUSE=""
 
 DEPEND=""
