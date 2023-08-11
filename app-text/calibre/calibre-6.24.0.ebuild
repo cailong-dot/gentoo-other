@@ -30,7 +30,7 @@ src_install() {
 	#Install in /opt
 	insinto /opt
 	doins -r "${WORKDIR}/calibre-${PV}"
-	fperms 755 /opt/calibre-${PV}
+	fperms -R 755 /opt/calibre-${PV}
 
 	#Install icon and desktop file
 	# domenu "${FILESDIR}/calibre.desktop"
