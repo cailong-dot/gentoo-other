@@ -6,8 +6,6 @@ EAPI=8
 DESCRIPTION="Calibre is an ebook management software"
 HOMEPAGE="https://calibre-ebook.com"
 
-
-
 SRC_URI="https://download.calibre-ebook.com/${PV}/calibre-${PV}-x86_64.txz"
 
 LICENSE="GPL-3"
@@ -21,9 +19,9 @@ BDEPEND=""
 
 S="${WORKDIR}"
 
-# src_compile() {
-# 	true
-# }
+src_compile() {
+	true
+}
 
 src_install() {
 	dodir "${WORKDIR}/calibre-${PV}"
@@ -32,7 +30,7 @@ src_install() {
 	#Install in /opt
 	insinto /opt
 	doins -r "${WORKDIR}/calibre-${PV}"
-	# fperms +x /opt/calibre/
+	fperms +x /opt/calibre-${PV}
 
 	#Install icon and desktop file
 	# domenu "${FILESDIR}/calibre.desktop"
