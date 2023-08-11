@@ -1,7 +1,7 @@
-# Copyright 2019 Gentoo Authors
+# Copyright 2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
 DESCRIPTION="Calibre is an ebook management software"
 HOMEPAGE="https://calibre-ebook.com"
@@ -19,7 +19,7 @@ DEPEND=""
 RDEPEND="${DEPEND}"
 BDEPEND=""
 
-S=$WORKDIR
+S="${WORKDIR}"
 
 src_compile() {
 	true
@@ -28,13 +28,13 @@ src_compile() {
 src_install() {
 	#dodir ${D}/opt/calibre-${PV}
 
-	insinto /opt/calibre-${PV}
-	doins -r ${S}/lib
-	doins -r ${S}/resources
+	insinto /opt/calibre
+	doins -r ${S}-x86_64/lib
+	doins -r ${S}-x86_64/resources
 
-	dodir /opt/calibre-${PV}/bin
-	exeinto /opt/calibre-${PV}/bin
-	doexe ${S}/bin/*
+	dodir /opt/calibre-${PV}-x86_64/bin
+	exeinto /opt/calibre-${PV}-x86_64/bin
+	doexe ${S}-x86_64/bin/*
 
 	exeinto /usr/bin
 	doexe ${FILESDIR}/calibre-bin
