@@ -19,7 +19,7 @@ DEPEND=""
 RDEPEND="${DEPEND}"
 BDEPEND=""
 
-S="${WORKDIR}/calibre-${PV}"
+S="${WORKDIR}"
 
 # src_compile() {
 # 	true
