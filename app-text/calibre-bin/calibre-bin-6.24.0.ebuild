@@ -29,15 +29,15 @@ src_install() {
 	#dodir ${D}/opt/calibre-${PV}
 
 	insinto /opt/calibre
-	doins -r ${S}-x86_64/lib
-	doins -r ${S}-x86_64/resources
+	# doins -r ${S}-x86_64/lib
+	# doins -r ${S}-x86_64/resources
 
-	dodir /opt/calibre-${PV}-x86_64/bin
-	exeinto /opt/calibre-${PV}-x86_64/bin
-	doexe ${S}-x86_64/bin/*
+	# dodir /opt/calibre-${PV}-x86_64/bin
+	# exeinto /opt/calibre-${PV}-x86_64/bin
+	# doexe ${S}-x86_64/bin/*
 
-	exeinto /usr/bin
-	doexe ${FILESDIR}/calibre-bin
+	# exeinto /usr/bin
+	# doexe ${FILESDIR}/calibre-bin
 
 	# sed -i -e "s|@PATH@|/opt/calibre-${PV}|g" ${D}/usr/bin/calibre-bin
 }
