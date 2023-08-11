@@ -26,7 +26,7 @@ S="${WORKDIR}"
 # }
 
 src_install() {
-	# cp -r "${S}" "${WORKDIR}/calibre"
+	cp -r "${S}" "opt/calibre"
 
 	#Install in /opt
 	insinto /opt/calibre-${PV}
