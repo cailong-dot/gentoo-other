@@ -19,25 +19,20 @@ DEPEND=""
 RDEPEND="${DEPEND}"
 BDEPEND=""
 
-S="${WORKDIR}"
+S="${WORKDIR}/calibre-${PV}"
 
-src_compile() {
-	true
-}
+# src_compile() {
+# 	true
+# }
 
 src_install() {
-	dodir /opt/calibre-${PV}
+	cp -r "${S}" "${WORKDIR}/calibre"
 
-	insinto /opt/calibre-${PV}
-	doins -r ${S}-x86_64/lib
-	doins -r ${S}-x86_64/resources
+	#Install in /opt
+	insinto /opt
+	doins -r "${WORKDIR}/calibre"
+	# fperms +x /opt/calibre/
 
-	dodir /opt/calibre-${PV}-x86_64/bin
-	exeinto /opt/calibre-${PV}-x86_64/bin
-	doexe ${S}-x86_64/bin/*
-
-	# exeinto /usr/bin
-	# doexe ${FILESDIR}/calibre-bin
-
-	# sed -i -e "s|@PATH@|/opt/calibre-${PV}|g" ${D}/usr/bin/calibre-bin
+	#Install icon and desktop file
+	# domenu "${FILESDIR}/calibre.desktop"
 }
