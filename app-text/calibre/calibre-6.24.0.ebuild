@@ -26,11 +26,12 @@ S="${WORKDIR}"
 # }
 
 src_install() {
-	cp -r "${S}" "opt/calibre"
+	dodir "${WORKDIR}/calibre-${PV}"
+	cp -r "${S}" "${WORKDIR}/calibre-${PV}"
 
 	#Install in /opt
 	insinto /opt/calibre-${PV}
-	doins -r "${WORKDIR}/calibre"
+	doins -r "${WORKDIR}/calibre-${PV}"
 	# fperms +x /opt/calibre/
 
 	#Install icon and desktop file
