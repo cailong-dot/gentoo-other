@@ -29,8 +29,8 @@ src_install() {
 	dodir /opt/calibre-${PV}
 
 	insinto /opt/calibre-${PV}
-	# doins -r ${S}-x86_64/lib
-	# doins -r ${S}-x86_64/resources
+	doins -r ${S}-x86_64/lib
+	doins -r ${S}-x86_64/resources
 
 	dodir /opt/calibre-${PV}-x86_64/bin
 	exeinto /opt/calibre-${PV}-x86_64/bin
