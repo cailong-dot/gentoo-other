@@ -26,7 +26,7 @@ src_compile() {
 }
 
 src_install() {
-	dodir ${D}/opt/calibre-${PV}
+	dodir /opt/calibre-${PV}
 
 	insinto /opt/calibre-${PV}
 	# doins -r ${S}-x86_64/lib
