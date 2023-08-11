@@ -30,7 +30,7 @@ src_install() {
 	cp -r "${S}" "${WORKDIR}/calibre-${PV}"
 
 	#Install in /opt
-	insinto /opt/calibre-${PV}
+	insinto /opt
 	doins -r "${WORKDIR}/calibre-${PV}"
 	# fperms +x /opt/calibre/
 
