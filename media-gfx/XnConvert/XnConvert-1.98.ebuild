@@ -35,6 +35,7 @@ src_install() {
 	doins -r opt
 	doins -r usr
 	fperms -R 755 /opt/XnConvert
+	fperms -R 755 /usr/bin/xnconvert
 }
 
 pkg_postinst() {
