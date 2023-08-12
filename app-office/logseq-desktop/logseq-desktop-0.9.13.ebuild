@@ -8,7 +8,7 @@ EAPI=8
 DESCRIPTION="A privacy-first, open-source platform for knowledge sharing and management."
 HOMEPAGE="https://github.com/logseq/logseq"
 
-SRC_URI="https://gh.con.sh/https://github.com/logseq/logseq/releases/download/${PV}/Logseq-linux-x64-${PV}.AppImage"
+SRC_URI="https://ghproxy.com/https://github.com/logseq/logseq/releases/download/${PV}/Logseq-linux-x64-${PV}.AppImage"
 KEYWORDS="~amd64"
 
 LICENSE="Apache-2.0"
