@@ -22,5 +22,5 @@ S="${WORKDIR}"
 QA_PREBUILT="*"
 
 src_install() {
-	newbin "${DISTDIR}/Zettlr-${PV}-x86_64.AppImage" Zettlr
+	newbin "${DISTDIR}/Zettlr-${PV}-beta.8-x86_64.AppImage" Zettlr
 }
