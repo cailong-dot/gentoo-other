@@ -20,13 +20,28 @@ S="${WORKDIR}"
 
 QA_PREBUILT="*"
 
-src_install() {
-	# domenu usr/share/applications/onlyoffice-desktopeditors.desktop
-	# for size in {16,24,32,48,64,128,256}; do
-	# 	newicon -s "${size}" opt/onlyoffice/desktopeditors/asc-de-"${size}".png onlyoffice-desktopeditors.png
-	# done
+src_prepare() {
+	default
+	sed \
+		-e "/Exec=xnconvert %U/c Exec=/opt/XnConvert/xnconvert.sh" \
+		-i "${S}"/usr/share/applications/XnConvert.desktop || die
+	rm -rf "${S}"/usr/bin
+}
 
-	# dobin usr/bin/desktopeditors usr/bin/onlyoffice-desktopeditors
+src_install() {
 	doins -r opt
+	doins -r usr
 	fperms -R 755 /opt/XnConvert
+}
+
+pkg_postinst() {
+	xdg_icon_cache_update
+	xdg_desktop_database_update
+	xdg_mimeinfo_database_update
+}
+
+pkg_postrm() {
+	xdg_icon_cache_update
+	xdg_desktop_database_update
+	xdg_mimeinfo_database_update
 }
