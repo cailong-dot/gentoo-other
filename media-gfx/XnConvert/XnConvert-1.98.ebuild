@@ -28,5 +28,5 @@ src_install() {
 
 	# dobin usr/bin/desktopeditors usr/bin/onlyoffice-desktopeditors
 	doins -r opt
-	# fperms +x /opt/onlyoffice/desktopeditors/{DesktopEditors,editors_helper,converter/x2t}
+	fperms -R 755 /opt/XnConvert
 }
