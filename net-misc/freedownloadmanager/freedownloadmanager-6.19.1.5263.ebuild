@@ -1,15 +1,15 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2023 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
-EAPI=7
+EAPI=8
 inherit xdg-utils font eutils
 
 KEYWORDS="~amd64"
 
 DESCRIPTION="Free Download Manager allows you to adjust traffic usage, organize downloads, control file priorities for torrents, efficiently download large files and resume broken downloads."
 HOMEPAGE="https://www.freedownloadmanager.org/"
-SRC_URI="https://files2.freedownloadmanager.org/6/latest/freedownloadmanager.deb"
+# SRC_URI="https://files2.freedownloadmanager.org/6/latest/freedownloadmanager.deb"
+SRC_URI="https://mirrors.sdu.edu.cn/spark-store-repository/amd64-store/network/freedownloadmanager/freedownloadmanager_6.19.1.5263_amd64.deb"
 
 SLOT="0"
 RESTRICT="strip"
