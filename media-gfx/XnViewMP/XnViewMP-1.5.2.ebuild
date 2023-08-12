@@ -7,7 +7,6 @@ DESCRIPTION="XnView MP image viewer/converter"
 HOMEPAGE="http://www.xnview.com/"
 SRC_URI="https://download.xnview.com/XnView_MP.glibc2.17-x86_64.AppImage"
 S="${WORKDIR}"
-# S_PATTERNS="${WORKDIR}/ImHex-Patterns-ImHex-v${PV}"
 
 LICENSE="freedist XnView"
 SLOT="0"
