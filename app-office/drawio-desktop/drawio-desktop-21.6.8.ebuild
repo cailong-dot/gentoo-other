@@ -8,7 +8,7 @@ EAPI=8
 DESCRIPTION="Diagram drawing application built on web technologies"
 HOMEPAGE="https://github.com/jgraph/drawio-desktop"
 
-SRC_URI="https://gh.con.sh/https://github.com/jgraph/drawio-desktop/releases/download/v${PV}/drawio-x86_64-${PV}.AppImage"
+SRC_URI="https://ghproxy.com/https://github.com/jgraph/drawio-desktop/releases/download/v${PV}/drawio-x86_64-${PV}.AppImage"
 KEYWORDS="~amd64"
 
 LICENSE="AGPL-3.0"
