@@ -23,9 +23,12 @@ QA_PREBUILT="*"
 src_prepare() {
 	default
 	sed \
-		-e "/Exec=xnconvert %U/c Exec=/opt/XnConvert/xnconvert.sh" \
+		-e "8 s/^/#/" \
 		-i "${S}"/usr/share/applications/XnConvert.desktop || die
-	rm -rf "${S}"/usr/bin
+	# sed \
+	# 	-e "/Exec=xnconvert %U/c Exec=/opt/XnConvert/xnconvert.sh" \
+	# 	-i "${S}"/usr/share/applications/XnConvert.desktop || die
+	# rm -rf "${S}"/usr/bin
 }
 
 src_install() {
