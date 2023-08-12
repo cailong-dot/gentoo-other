@@ -7,5 +7,5 @@ LICENSE=GPL-3
 RDEPEND=sys-fs/fuse:0
 RESTRICT=strip
 SLOT=0
-SRC_URI=https://download.yzuu.cf/Zettlr/Zettlr/releases/download/v3.0.0-beta.8/Zettlr-3.0.0-beta.8-x86_64.AppImage
-_md5_=61ce0cd19fe5b84e51042052d7a65030
+SRC_URI=https://ghproxy.com/https://github.com/Zettlr/Zettlr/releases/download/v3.0.0-beta.8/Zettlr-3.0.0-beta.8-x86_64.AppImage
+_md5_=51d36d40674ff1205312317c4bebb9ee
