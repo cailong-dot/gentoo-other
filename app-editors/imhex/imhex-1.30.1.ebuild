@@ -5,7 +5,7 @@ EAPI=8
 
 DESCRIPTION="A hex editor for reverse engineers, programmers, and eyesight"
 HOMEPAGE="https://github.com/WerWolv/ImHex"
-SRC_URI="https://download.njuu.cf/WerWolv/ImHex/releases/download/v1.30.1/imhex-1.30.1-x86_64.AppImage"
+SRC_URI="https://ghproxy.com/https://github.com/WerWolv/ImHex/releases/download/v1.30.1/imhex-1.30.1-x86_64.AppImage"
 S="${WORKDIR}"
 # S_PATTERNS="${WORKDIR}/ImHex-Patterns-ImHex-v${PV}"
 
