@@ -6,7 +6,7 @@ EAPI=8
 
 DESCRIPTION="A Markdown Editor for the 21st century."
 HOMEPAGE="https://www.zettlr.com/"
-SRC_URI="https://download.yzuu.cf/Zettlr/Zettlr/releases/download/v${PV}-beta.8/Zettlr-${PV}-beta.8-x86_64.AppImage"
+SRC_URI="https://ghproxy.com/https://github.com/Zettlr/Zettlr/releases/download/v${PV}-beta.8/Zettlr-${PV}-beta.8-x86_64.AppImage"
 
 LICENSE="GPL-3"
 SLOT="0"
