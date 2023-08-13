@@ -5,7 +5,8 @@ EAPI=8
 MY_PV="${PV/-sp3/}"
 DESCRIPTION="Cyber Security ALL-IN-ONE Platform "
 HOMEPAGE="https://yaklang.io"
-SRC_URI="https://git.xfj0.cn/https://github.com/yaklang/yakit/releases/download/v${MY_PV}/Yakit-${MY_PV}-linux-amd64.AppImage"
+# SRC_URI="https://git.xfj0.cn/https://github.com/yaklang/yakit/releases/download/v${MY_PV}/Yakit-${MY_PV}-linux-amd64.AppImage"
+SRC_URI="https://yaklang.oss-cn-beijing.aliyuncs.com/yak/${MY_PV}/Yakit-${MY_PV}-linux-amd64.AppImage"
 
 LICENSE="AGPL-3"
 SLOT="0"
@@ -21,5 +22,5 @@ S="${WORKDIR}"
 QA_PREBUILT="*"
 
 src_install() {
-	newbin "${DISTDIR}/Yakit-1.2.3-sp3-linux-amd64.AppImage" Yakit
+	newbin "${DISTDIR}/Yakit-${MY_PV}-linux-amd64.AppImage" Yakit
 }
