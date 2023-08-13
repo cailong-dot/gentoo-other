@@ -7,5 +7,5 @@ LICENSE=AGPL-3
 RDEPEND=sys-fs/fuse:0
 RESTRICT=strip
 SLOT=0
-SRC_URI=https://git.xfj0.cn/https://github.com/yaklang/yakit/releases/download/v1.2.3/Yakit-1.2.3-linux-amd64.AppImage
-_md5_=3c6c9c51f0de2fbcf7fe9e5f5bd73c6f
+SRC_URI=https://yaklang.oss-cn-beijing.aliyuncs.com/yak/1.2.3/Yakit-1.2.3-linux-amd64.AppImage
+_md5_=3de8b83f37a1994c2c7f56805bfc282c
