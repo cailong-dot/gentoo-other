@@ -20,32 +20,6 @@ S="${WORKDIR}"
 
 QA_PREBUILT="*"
 
-# src_prepare() {
-# 	default
-# 	sed \
-# 		-e "8 s/^/#/" \
-# 		-i "${S}"/usr/share/applications/XnConvert.desktop || die
-# 	# sed \
-# 	# 	-e "/Exec=xnconvert %U/c Exec=/opt/XnConvert/xnconvert.sh" \
-# 	# 	-i "${S}"/usr/share/applications/XnConvert.desktop || die
-# 	# rm -rf "${S}"/usr/bin
-# }
-
 src_install() {
 	doins -r opt
-	# doins -r usr
-	# fperms -R 755 /opt/XnView
-	# fperms -R 755 /usr/bin/xnview
 }
-
-# pkg_postinst() {
-# 	xdg_icon_cache_update
-# 	xdg_desktop_database_update
-# 	xdg_mimeinfo_database_update
-# }
-
-# pkg_postrm() {
-# 	xdg_icon_cache_update
-# 	xdg_desktop_database_update
-# 	xdg_mimeinfo_database_update
-# }
