@@ -26,6 +26,10 @@ BDEPEND="
 QA_PREBUILT="*"
 S="${WORKDIR}"
 
+src_unpack() {
+	zstd -d ${A}
+}
+
 src_install() {
 	# domenu "${FILESDIR}/anki.desktop"
 	# doicon "${S}/anki.png"
