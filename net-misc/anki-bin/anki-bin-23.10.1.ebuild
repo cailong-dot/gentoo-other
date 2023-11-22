@@ -46,6 +46,8 @@ src_install() {
 	cp -r "${S}" "${WORKDIR}/anki"
 	insinto /opt
 	doins -r "${WORKDIR}/anki"
+	domenu "${s}/anki/anki.desktop"
+	doicon "${S}/anki/anki.png"
 	# mkdir -p "${D}/opt/anki" || die
 	# cp -r "${S}" "${D}/opt/anki/" || die
 	# dosym ../anki/anki /opt/bin/anki
