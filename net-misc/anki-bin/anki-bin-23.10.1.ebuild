@@ -19,7 +19,9 @@ RDEPEND="
 	app-misc/ca-certificates
 	!app-misc/anki
 "
-BDEPEND="app-arch/unzip"
+BDEPEND="
+	app-arch/unzip
+	app-arch/zstd"
 QA_PREBUILT="*"
 S="${WORKDIR}"
 
