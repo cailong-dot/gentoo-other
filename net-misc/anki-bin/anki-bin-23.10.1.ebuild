@@ -21,7 +21,8 @@ RDEPEND="
 "
 BDEPEND="
 	app-arch/unzip
-	app-arch/zstd"
+	app-arch/zstd
+	app-arch/tar"
 QA_PREBUILT="*"
 S="${WORKDIR}"
 
