@@ -42,12 +42,12 @@ src_unpack() {
 src_install() {
 	# domenu "${FILESDIR}/anki.desktop"
 	# doicon "${S}/anki.png"
-	dodir "${WORKDIR}/anki"
-	cp -r "${S}" "${WORKDIR}/anki"
+	dodir "${WORKDIR}"
+	cp -r "${S}" "${WORKDIR}"
 	insinto /opt
-	doins -r "${WORKDIR}/anki"
-	domenu "${s}/anki/anki.desktop"
-	doicon "${S}/anki/anki.png"
+	doins -r "${WORKDIR}"
+	domenu "${s}/anki.desktop"
+	doicon "${S}/anki.png"
 	# mkdir -p "${D}/opt/anki" || die
 	# cp -r "${S}" "${D}/opt/anki/" || die
 	# dosym ../anki/anki /opt/bin/anki
