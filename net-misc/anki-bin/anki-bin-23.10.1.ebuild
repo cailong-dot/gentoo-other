@@ -26,17 +26,18 @@ BDEPEND="
 QA_PREBUILT="*"
 S="${WORKDIR}"
 
-# src_unpack() {
-# 	zstd -d ${A}
-# }
-
-src_prepare() {
-	unpack ${A}
-	# unpack ./data.tar.xz
-
-	eapply_user
-
+src_unpack() {
+	# zstd -d ${A}
+	default
 }
+
+# src_prepare() {
+# 	unpack ${A}
+# 	# unpack ./data.tar.xz
+
+# 	eapply_user
+
+# }
 
 src_install() {
 	# domenu "${FILESDIR}/anki.desktop"
