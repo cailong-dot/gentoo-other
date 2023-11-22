@@ -24,7 +24,7 @@ QA_PREBUILT="*"
 S="${WORKDIR}"
 
 src_install() {
-	domenu "${FILESDIR}/anki.desktop"
+	# domenu "${FILESDIR}/anki.desktop"
 	doicon "${S}/anki.png"
 	mkdir -p "${D}/opt/anki" || die
 	cp -r "${S}"/* "${D}/opt/anki/" || die
