@@ -21,7 +21,7 @@ RDEPEND="
 "
 BDEPEND="app-arch/unzip"
 QA_PREBUILT="*"
-S="${WORKDIR}/anki-23.10.1-linux-qt6"
+S="${WORKDIR}"
 
 src_install() {
 	domenu "${FILESDIR}/anki.desktop"
