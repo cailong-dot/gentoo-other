@@ -1,0 +1,13 @@
+DEFINED_PHASES=install postinst postrm unpack
+DESCRIPTION=A pleasant note-taking platform.
+EAPI=8
+HOMEPAGE=https://app.vnote.fun/
+INHERIT=unpacker xdg-utils
+KEYWORDS=~amd64
+LICENSE=GPL-3
+RDEPEND=
+RESTRICT=mirror
+SLOT=0
+SRC_URI=https://mirrors.sdu.edu.cn/spark-store-repository/amd64-store/office/vnote/vnote_3.17.0_amd64.deb
+_eclasses_=multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	toolchain-funcs	eed10cf5e5a06916e654d31f5a1925cc	multilib	c19072c3cd7ac5cb21de013f7e9832e0	unpacker	aa6a4e924009232d8b78b31e932c30b5	xdg-utils	baea6080dd821f5562d715887954c9d3
+_md5_=4ce19105c04c9b577ee31ecc3b890815

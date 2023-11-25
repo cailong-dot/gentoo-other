@@ -1,0 +1,9 @@
+DEFINED_PHASES=compile install
+DESCRIPTION=Calibre is an ebook management software
+EAPI=8
+HOMEPAGE=https://calibre-ebook.com
+KEYWORDS=~amd64
+LICENSE=GPL-3
+SLOT=0
+SRC_URI=https://mirror.ghproxy.com/https://github.com/kovidgoyal/calibre/releases/download/v7.1.0/calibre-7.1.0-x86_64.txz
+_md5_=66e4ec922b7eb8e44504e7ce3ae962dc
