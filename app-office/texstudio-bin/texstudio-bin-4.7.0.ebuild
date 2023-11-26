@@ -28,7 +28,7 @@ src_unpack() {
 
 src_install() {
 	# doins -r "${S}"/"${PN}"/*
-	insinto
+	insinto /usr
 }
 
 pkg_postrm() {
