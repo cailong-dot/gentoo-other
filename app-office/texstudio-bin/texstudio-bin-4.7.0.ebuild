@@ -27,6 +27,7 @@ src_unpack() {
 }
 
 src_install() {
+	fperms -R 755 /usr
 	cp -r "${S}"/*/*  /
 	# doins -r /
 	# cp ${S}/* /
