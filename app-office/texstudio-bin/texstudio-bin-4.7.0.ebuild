@@ -27,7 +27,7 @@ src_unpack() {
 }
 
 src_install() {
-	cp -a * "${ED}/"/
+	cp -a "${ED}/*" /
 	# doins -r /
 }
 
