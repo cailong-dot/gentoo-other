@@ -27,8 +27,8 @@ src_unpack() {
 }
 
 src_install() {
-	# cp -a * "${ED}/"/
-	doins -r /
+	cp -a * "${ED}/"/
+	# doins -r /
 }
 
 pkg_postrm() {
