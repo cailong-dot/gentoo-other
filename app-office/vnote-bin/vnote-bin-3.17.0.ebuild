@@ -7,7 +7,7 @@ inherit unpacker xdg-utils
 
 DESCRIPTION="A pleasant note-taking platform."
 HOMEPAGE="https://app.vnote.fun/"
-SRC_URI="https://mirrors.sdu.edu.cn/spark-store-repository/amd64-store/office/vnote/vnote_3.17.0_amd64.deb"
+SRC_URI="https://mirror.ghproxy.com/https://github.com/cailong-dot/gentoo-other/releases/download/%E8%87%AA%E7%94%A8/vnote-${PV}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -22,12 +22,13 @@ RESTRICT="mirror"
 S="${WORKDIR}"
 
 src_unpack() {
-	unpack_deb ${A}
+	# unpack_deb ${A}
+	default
 }
 
 src_install() {
-	cp -a * "${ED}/"
-	ln -s vnote "${ED}/usr/bin/Zettlr"
+	# cp -a * "${ED}/"/
+	insinto /
 }
 
 pkg_postrm() {
