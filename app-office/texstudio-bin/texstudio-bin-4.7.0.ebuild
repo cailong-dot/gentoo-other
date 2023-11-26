@@ -27,9 +27,9 @@ src_unpack() {
 }
 
 src_install() {
-	# cp -a * "${ED}/" /
+	cp -a * "${ED}/texstudio/" /usr/
 	# doins -r /
-	cp ${S}/* /
+	# cp ${S}/* /
 }
 
 pkg_postrm() {
