@@ -28,7 +28,7 @@ src_unpack() {
 
 src_install() {
 	# cp -a * "${ED}/"/
-	insinto /
+	insinto /usr
 }
 
 pkg_postrm() {
