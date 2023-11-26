@@ -27,7 +27,8 @@ src_unpack() {
 }
 
 src_install() {
-	doins -r "${S}"/*
+	doins -r "${S}"/*/*
+	fperms -R 755 /usr/local/bin/texstudio
 	# insinto /usr/
 }
 
