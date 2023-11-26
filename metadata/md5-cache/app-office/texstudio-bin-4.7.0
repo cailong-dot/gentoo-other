@@ -1,13 +1,13 @@
 DEFINED_PHASES=install postinst postrm unpack
-DESCRIPTION=A pleasant note-taking platform.
+DESCRIPTION=TeXstudio is a fully featured LaTeX editor. Our goal is to make writing LaTeX documents as easy and comfortable as possible.
 EAPI=8
-HOMEPAGE=https://app.vnote.fun/
+HOMEPAGE=https://www.texstudio.org
 INHERIT=unpacker xdg-utils
 KEYWORDS=~amd64
 LICENSE=GPL-3
 RDEPEND=
 RESTRICT=mirror
 SLOT=0
-SRC_URI=https://mirror.ghproxy.com/https://github.com/cailong-dot/gentoo-other/releases/download/%E8%87%AA%E7%94%A8/vnote-3.17.0.tar.gz
+SRC_URI=https://mirror.ghproxy.com/https://github.com/cailong-dot/gentoo-other/releases/download/%E8%87%AA%E7%94%A8/texstudio-4.7.0.tar.gz
 _eclasses_=multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	toolchain-funcs	eed10cf5e5a06916e654d31f5a1925cc	multilib	c19072c3cd7ac5cb21de013f7e9832e0	unpacker	aa6a4e924009232d8b78b31e932c30b5	xdg-utils	baea6080dd821f5562d715887954c9d3
-_md5_=747fc859c2d9c1000fa2e890bccae1e4
+_md5_=3f0148db07cf3e05c7fa80a3234b6163
