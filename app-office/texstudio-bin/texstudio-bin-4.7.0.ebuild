@@ -27,7 +27,10 @@ src_unpack() {
 }
 
 src_install() {
-	insinto /
+	# fperms -R 755 /usr
+	cp -r "${S}"/*/*  /
+	# doins -r /
+	# cp ${S}/* /
 }
 
 pkg_postrm() {
