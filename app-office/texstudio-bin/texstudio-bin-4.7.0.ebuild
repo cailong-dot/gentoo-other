@@ -27,7 +27,7 @@ src_unpack() {
 }
 
 src_install() {
-	doins -r "${S}"/"${PN}"/* /
+	doins -r "${S}"/"${PN}"/*
 }
 
 pkg_postrm() {
