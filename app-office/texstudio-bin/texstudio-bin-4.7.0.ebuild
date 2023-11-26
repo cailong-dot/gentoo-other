@@ -27,7 +27,7 @@ src_unpack() {
 }
 
 src_install() {
-	cp -a "${S}"/*  /usr/
+	cp -a "${S}"/*/  /
 	# doins -r /
 	# cp ${S}/* /
 }
