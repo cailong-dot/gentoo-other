@@ -7,7 +7,7 @@ inherit desktop unpacker xdg
 
 DESCRIPTION="XnView MP: Image management"
 HOMEPAGE="https://www.xnview.com/en/xnviewmp/"
-SRC_URI="https://download.xnview.com/XnViewMP-linux-x64.deb"
+SRC_URI="https://mirror.ghproxy.com/https://github.com/cailong-dot/gentoo-other/releases/download/%E8%87%AA%E7%94%A8/XnViewMP-linux-x64.deb"
 
 LICENSE="freedist XnView"
 SLOT="0"

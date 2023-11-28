@@ -7,7 +7,8 @@ inherit desktop unpacker xdg
 
 DESCRIPTION="XnConvert: The Best Bulk Image Converter"
 HOMEPAGE="https://www.xnview.com/en/xnconvert/"
-SRC_URI="https://download.xnview.com/XnConvert-linux-x64.deb"
+SRC_URI="https://mirror.ghproxy.com/https://github.com/cailong-dot/gentoo-other/releases/download/%E8%87%AA%E7%94%A8/XnConvert-linux-x64.deb"
+
 
 LICENSE="freedist XnView"
 SLOT="0"
