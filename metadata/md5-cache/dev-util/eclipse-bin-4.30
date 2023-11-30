@@ -1,0 +1,12 @@
+DEFINED_PHASES=install
+DESCRIPTION=Eclipse SDK
+EAPI=8
+HOMEPAGE=http://www.eclipse.org
+INHERIT=desktop
+KEYWORDS=~x86 amd64
+LICENSE=EPL-1.0
+RDEPEND=>=virtual/jdk-1.8 x11-libs/gtk+:2
+SLOT=0
+SRC_URI=https://mirrors.neusoft.edu.cn/eclipse/technology/epp/downloads/release/2023-12/RC1/eclipse-java-2023-12-RC1-linux-gtk-x86_64.tar.gz
+_eclasses_=desktop	021728fdc1b03b36357dbc89489e0f0d
+_md5_=c684052187c4f2e6ee0c8f1423c830d1
