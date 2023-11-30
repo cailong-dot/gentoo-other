@@ -9,14 +9,14 @@ inherit desktop
 SR="R"
 RNAME="2023-09"
 
-SRC_BASE="https://mirrors.neusoft.edu.cn/eclipse/technology/epp/downloads/release/${RNAME}/${SR}/eclipse-java-${RNAME}-${SR}-linux-gtk"
+# SRC_BASE="https://mirrors.neusoft.edu.cn/eclipse/technology/epp/downloads/release/${RNAME}/${SR}/eclipse-java-${RNAME}-${SR}-linux-gtk"
 
 DESCRIPTION="Eclipse SDK"
 HOMEPAGE="http://www.eclipse.org"
-SRC_URI="amd64? ( ${SRC_BASE}-x86_64.tar.gz -> eclipse-java-${RNAME}-${SR}-linux-gtk-x86_64-${PV}.tar.gz )"
+SRC_URI="https://mirrors.neusoft.edu.cn/eclipse/technology/epp/downloads/release/${RNAME}/${SR}/eclipse-java-${RNAME}-${SR}-linux-gtk-x86_64.tar.gz"
 
 LICENSE="EPL-1.0"
-SLOT="$(ver_cut 1-2)"
+SLOT="0"
 KEYWORDS="~x86 amd64"
 IUSE=""
 
@@ -27,7 +27,7 @@ RDEPEND="
 S=${WORKDIR}/eclipse
 
 src_install() {
-	local dest=/opt/${PN}-${SLOT}
+	local dest=/opt/${PN}
 
 	insinto ${dest}
 	doins -r features icon.xpm plugins artifacts.xml p2 eclipse.ini configuration dropins
