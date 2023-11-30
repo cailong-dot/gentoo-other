@@ -1,50 +1,39 @@
-# Copyright 1999-2022 Gentoo Authors
+# Copyright 1999-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
 
 EAPI=8
 
-inherit desktop
+inherit desktop wrapper xdg
 
-SR="R"
-RNAME="2023-09"
+MY_PN="eclipse"
+MY_PV="2023-09"
+SRC_URI="https://mirrors.tuna.tsinghua.edu.cn/eclipse/technology/epp/downloads/release/${MY_PV}/R/eclipse-jee-${MY_PV}-R-linux-gtk-x86_64.tar.gz"
 
-# SRC_BASE="https://mirrors.neusoft.edu.cn/eclipse/technology/epp/downloads/release/${RNAME}/${SR}/eclipse-java-${RNAME}-${SR}-linux-gtk"
+DESCRIPTION="Eclipse IDE for Enterprise Java and Web Developers"
+HOMEPAGE="https://www.eclipse.org/"
 
-DESCRIPTION="Eclipse SDK"
-HOMEPAGE="http://www.eclipse.org"
-SRC_URI="https://mirrors.neusoft.edu.cn/eclipse/technology/epp/downloads/release/${RNAME}/${SR}/eclipse-java-${RNAME}-${SR}-linux-gtk-x86_64.tar.gz"
+S="${WORKDIR}/${MY_PN}"
 
-LICENSE="EPL-1.0"
+LICENSE="EPL-2.0"
 SLOT="0"
-KEYWORDS="~x86 amd64"
-IUSE=""
+KEYWORDS="-* ~amd64 ~arm64"
+RESTRICT="mirror"
 
 RDEPEND="
-	>=virtual/jdk-1.8
-	x11-libs/gtk+:2"
+	x11-libs/gtk+:3
+"
 
-S=${WORKDIR}/eclipse
+QA_FLAGS_IGNORED=".*"
 
 src_install() {
-	local dest=/opt/${PN}
+	insinto "/opt/${PN}"
+	doins -r "${S}/."
 
-	insinto ${dest}
-	doins -r features icon.xpm plugins artifacts.xml p2 eclipse.ini configuration dropins
+	exeinto "/opt/${PN}"
+	doexe "${S}/${MY_PN}"
+	# make_wrapper ${PN%-*} "/opt/${PN}/${MY_PN} -vm /opt/openjdk*/bin/java" "" "/opt/${PN}" "/opt/bin"
 
-	exeinto ${dest}
-	doexe eclipse
-
-	docinto html
-	dodoc -r readme/*
-
-	cp "${FILESDIR}"/eclipserc-bin-${SLOT} "${T}" || die
-	cp "${FILESDIR}"/eclipse-bin-${SLOT} "${T}" || die
-	sed "s@%SLOT%@${SLOT}@" -i "${T}"/eclipse{,rc}-bin-${SLOT} || die
-
-	insinto /etc
-	newins "${T}"/eclipserc-bin-${SLOT} eclipserc-bin-${SLOT}
-
-	newbin "${T}"/eclipse-bin-${SLOT} eclipse-bin-${SLOT}
-	make_desktop_entry "eclipse-bin-${SLOT}" "Eclipse ${PV} (bin)" "${dest}/icon.xpm"
+	doicon -s 48 plugins/org.eclipse.platform_4.28.0.v20230605-0440/eclipse48.png
+	make_desktop_entry eclipse-jee "Eclipse IDE JEE ${MY_PV}" eclipse48 "Development;" \
+		|| die "Failed making desktop entry!"
 }
