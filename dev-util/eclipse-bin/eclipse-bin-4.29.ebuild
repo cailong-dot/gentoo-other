@@ -33,7 +33,7 @@ src_install() {
 	doexe "${S}/${MY_PN}"
 	# make_wrapper ${PN%-*} "/opt/${PN}/${MY_PN} -vm /opt/openjdk*/bin/java" "" "/opt/${PN}" "/opt/bin"
 
-	doicon -s 48 plugins/org.eclipse.platform_4.28.0.v20230605-0440/eclipse48.png
+	# doicon -s 48 plugins/org.eclipse.platform_4.28.0.v20230605-0440/eclipse48.png
 	make_desktop_entry eclipse-jee "Eclipse IDE JEE ${MY_PV}" eclipse48 "Development;" \
 		|| die "Failed making desktop entry!"
 }
