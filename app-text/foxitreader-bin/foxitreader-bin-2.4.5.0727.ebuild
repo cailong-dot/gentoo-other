@@ -23,8 +23,8 @@ src_compile() {
 }
 
 src_install() {
-	#dodir "${WORKDIR}/foxitreader"
-    #cp -r "${S}"/*/* "${WORKDIR}/foxitreader"
+	dodir "${WORKDIR}/foxitreader"
+    cp -r "${S}"/*/* "${WORKDIR}/"
 
     #Install in /opt
     insinto /opt/
