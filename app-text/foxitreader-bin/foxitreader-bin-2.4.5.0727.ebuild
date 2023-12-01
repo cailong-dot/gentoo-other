@@ -23,14 +23,12 @@ src_compile() {
 }
 
 src_install() {
-	dodir "${WORKDIR}/FoxitReader"
-	cp -r "${S}" "${WORKDIR}/FoxitReader"
+	#dodir "${WORKDIR}/foxitreader"
+    #cp -r "${S}"/*/* "${WORKDIR}/foxitreader"
 
-	#Install in /opt
-	insinto /opt
-	doins -r "${WORKDIR}/FoxitReader"
-	fperms -R 755 /opt/calibre-${PV}
-
-	#Install icon and desktop file
-	domenu "${FILESDIR}/calibre.desktop"
+    #Install in /opt
+    insinto /opt/
+    doins -r "${WORKDIR}/foxitreader"
+    #Install icon and desktop file
+    domenu "/opt/foxitreader/FoxitReader.desktop"
 }
