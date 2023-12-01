@@ -30,5 +30,5 @@ src_install() {
     insinto /opt/
     doins -r "${WORKDIR}/foxitreader"
     #Install icon and desktop file
-    domenu "/opt/foxitreader/FoxitReader.desktop"
+    domenu "${WORKDIR}/foxitreader/FoxitReader.desktop"
 }
