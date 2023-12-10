@@ -12,10 +12,10 @@ if [[ ${PV} == 9999 ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://git.suckless.org/dwm"
 else
-	SRC_URI="https://gitee.com/cailong-dot/gentoo-cailong/blob/master/xarchive/dwm-6.4.tar.gz"
+	SRC_URI="https://mirror.ghproxy.com/https://github.com/cailong-dot/gentoo-other/releases/download/dwm-6.4-patched/dwm-6.4.tar.gz"
 	KEYWORDS="amd64"
 fi
-# https://gitee.com/cailong-dot/gentoo-cailong/blob/master/xarchive/dwm-6.4.tar.gz
+# https://mirror.ghproxy.com/https://github.com/cailong-dot/gentoo-other/releases/download/dwm-6.4-patched/dwm-6.4.tar.gz
 LICENSE="MIT"
 SLOT="0"
 IUSE="xinerama"
