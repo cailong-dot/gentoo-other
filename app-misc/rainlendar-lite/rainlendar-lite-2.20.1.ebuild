@@ -25,7 +25,7 @@ QA_TEXTRELS="opt/rainlendar2/plugins/iCalendarPlugin.so"
 
 src_install() {
 	insinto /opt/rainlendar2
-	doins -r locale resources scripts skins rainlendar2.htb lfx.so
+	doins -r locale resources scripts skins rainlendar2.htb lfs.so
 	# the executable searches in . for the dirs above
 	exeinto /opt/rainlendar2
 	doexe rainlendar2
