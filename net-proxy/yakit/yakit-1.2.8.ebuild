@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
-MY_PV="${PV/-sp3/}"
+MY_PV="${PV/-sp5/}"
 DESCRIPTION="Cyber Security ALL-IN-ONE Platform "
 HOMEPAGE="https://yaklang.io"
 # SRC_URI="https://git.xfj0.cn/https://github.com/yaklang/yakit/releases/download/v${MY_PV}/Yakit-${MY_PV}-linux-amd64.AppImage"

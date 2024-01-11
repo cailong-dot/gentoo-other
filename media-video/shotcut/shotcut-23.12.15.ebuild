@@ -29,7 +29,7 @@ DEPEND="
 	dev-qt/qtdeclarative:6[widgets]
 	dev-qt/qtmultimedia:6[qml]
 	dev-qt/qtwebsockets:6
-	>=media-libs/mlt-7.22.0[ffmpeg,frei0r,fftw(+),jack,opengl,qt6,sdl,xml]
+	>=media-libs/mlt-7.22.0[ffmpeg,frei0r,fftw(+),jack,opengl,qt5,sdl,xml]
 	media-video/ffmpeg
 	sci-libs/fftw
 	x11-libs/libxkbcommon

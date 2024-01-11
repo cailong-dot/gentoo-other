@@ -1,6 +1,6 @@
 # Copyright 1999-2023 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-
+6.20.0.5510
 EAPI=8
 inherit xdg-utils font
 
