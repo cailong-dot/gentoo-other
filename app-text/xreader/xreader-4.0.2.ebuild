@@ -7,7 +7,7 @@ inherit  meson xdg
 
 DESCRIPTION="A generic Document Reader"
 HOMEPAGE="https://github.com/linuxmint/xreader"
-SRC_URI="https://mirror.ghproxy.com/https://github.com/linuxmint/xreader/archive/refs/tags/master.mint21.tar.gz"
+SRC_URI="https://mirror.ghproxy.com/https://github.com/linuxmint/xreader/archive/refs/tags/master.mint21.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2.0"
 SLOT="0"
