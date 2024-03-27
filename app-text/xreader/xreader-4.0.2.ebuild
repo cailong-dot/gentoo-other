@@ -3,16 +3,15 @@
 
 EAPI=8
 
-inherit  meson xdg git-r3
+inherit  meson xdg
 
 DESCRIPTION="A generic Document Reader"
 HOMEPAGE="https://github.com/linuxmint/xreader"
-#EGIT_REPO_URI="https://github.com/linuxmint/xreader/tree/master.mint21 -> ${P}"
 SRC_URI="https://mirror.ghproxy.com/https://github.com/cailong-dot/gentoo-other/releases/download/%E8%87%AA%E7%94%A8/xreader-4.0.2.tar.gz"
 
 LICENSE="GPL-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~amd64-linux "
+KEYWORDS="~amd64"
 IUSE="+comics +djvu +dvi +pdf +introspection +postscript +tiff +xps +mathjax +pixbuf -epub"
 
 DEPEND="
@@ -59,7 +58,7 @@ src_prepare() {
 src_configure() {
 	local emesonargs=(
 		--prefix=/usr
-		--buildtype=plain
+		-Dbuildtype=plain
   		-Ddeprecated_warnings=false
 		-Dcomics=true
 		-Ddjvu=true
@@ -69,7 +68,7 @@ src_configure() {
   		-Dintrospection=true
 	)
 	if use !epub; then
-		emesonargs+=( -Depub=true )
+		emesonargs+=( -Depub=false )
 	fi
 	if use mathjax; then
 		emesonargs+=( -Dmathjax-directory=/usr/share/mathjax )
