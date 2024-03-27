@@ -45,6 +45,7 @@ src_prepare() {
 
 src_configure() {
 	local emesonargs=(
+		--prefix=/usr
 		-Dcomics=true
 		-Ddjvu=true
 		-Ddvi=true
