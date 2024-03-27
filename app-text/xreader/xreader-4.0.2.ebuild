@@ -7,8 +7,8 @@ inherit  meson xdg git-r3
 
 DESCRIPTION="A generic Document Reader"
 HOMEPAGE="https://github.com/linuxmint/xreader"
-EGIT_REPO_URI="https://github.com/linuxmint/xreader/tree/master.mint21 -> ${P}"
-#SRC_URI="https://mirror.ghproxy.com/https://github.com/linuxmint/xreader/archive/refs/tags/master.mint21.tar.gz -> ${P}.tar.gz"
+#EGIT_REPO_URI="https://github.com/linuxmint/xreader/tree/master.mint21 -> ${P}"
+SRC_URI="https://mirror.ghproxy.com/https://github.com/cailong-dot/gentoo-other/releases/download/%E8%87%AA%E7%94%A8/xreader-4.0.2.tar.gz"
 
 LICENSE="GPL-2.0"
 SLOT="0"
@@ -21,6 +21,7 @@ DEPEND="
 	dev-libs/libxml2:2
 	sys-libs/zlib:=
 	x11-libs/cairo
+	media-libs/t1lib
 	comics? ( app-arch/libarchive:= )
 	app-text/poppler:=[cairo,tiff,introspection]
 	djvu? ( app-text/djvu:= )
@@ -58,25 +59,14 @@ src_prepare() {
 src_configure() {
 	local emesonargs=(
 		--prefix=/usr
+		--buildtype=plain
+  		-Ddeprecated_warnings=false
 		-Dcomics=true
 		-Ddjvu=true
 		-Ddvi=true
-		-Dpdf=true
-		-Dps=true
-		-Dtiff=true
-		-Dxps=true
-		-Dt1lib=false
-		-Dpixbuf=false
-		-Dgtk_unix_print=true
-		-Dkering=true
-		-Dpreviewer=true
-		-Dthumbnailer=true
-		-Ddocs=false
-		-Dhelp_files=false
-		-Dintrospection=true
-		-Denable_dbus=true
-		-Ddeprecated_warnings=false
-		-Denable_debug=false
+		-Dt1lib=true
+		-Dpixbuf=true
+  		-Dintrospection=true
 	)
 	if use !epub; then
 		emesonargs+=( -Depub=true )
