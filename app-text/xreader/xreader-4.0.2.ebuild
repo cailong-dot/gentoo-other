@@ -96,8 +96,8 @@ src_configure() {
 	fi
 	if use dvi; then
 		emesonargs+=( 
-			-Ddvi =true
-			-Dt1lib =true
+			-Ddvi=true
+			-Dt1lib=true
 		)
 	fi
 	if use docs; then
@@ -105,7 +105,7 @@ src_configure() {
 	fi
 	if use introspection; then
 		emesonargs+=( 
-			-Dintrospection =true
+			-Dintrospection=true
 		)
 	fi
 	meson_src_configure
