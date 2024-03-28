@@ -11,7 +11,7 @@ HOMEPAGE="https://github.com/tamlok/vnote"
 if [[ ${PV} == 9999 ]];then
 	KEYWORDS=""
 else
-	KEYWORDS="~amd64 ~arm ~arm64 ~x86"
+	KEYWORDS="~amd64"
 	SRC_URI="https://mirror.ghproxy.com/https://github.com/cailong-dot/gentoo-other/releases/download/vnote-full-src/vnote-3.17.0.tar.gz"
 fi
 
@@ -20,9 +20,15 @@ SLOT="0"
 IUSE=""
 
 DEPEND="
-	>=dev-qt/qtcore-5.9:5=
-	>=dev-qt/qtwebengine-5.9:5=
-	>=dev-qt/qtsvg-5.9:5=
+	=dev-qt/qtbase-5.15:5=
+	=dev-qt/qtwebchannel-5.15:5=
+	=dev-qt/qttools-5.15:5=
+	=dev-qt/qtsvg-5.15:5=
+	=dev-qt/qtlocation-5.15:5=
+	=dev-qt/qttranslations-5.15:5=
+	=dev-qt/qtwebengine-5.15:5=
+	=dev-qt/qtx11extras-5.15:5=
+	=dev-qt/qtdeclarative-5.15:5=
 "
 RDEPEND="${DEPEND}"
 
