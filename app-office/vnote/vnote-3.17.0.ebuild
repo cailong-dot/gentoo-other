@@ -20,10 +20,13 @@ SLOT="0"
 IUSE=""
 
 DEPEND="
+	dev-qt/qtwebchannel:5=
 	dev-qt/qtsvg:5=
+	dev-qt/qtlocation:5=
 	dev-qt/qttranslations:5=
-	dev-qt/qtwebengine:5=[webchannel,location,declarative]
+	dev-qt/qtwebengine:5=
 	dev-qt/qtx11extras:5=
+	dev-qt/qtdeclarative:5=
 "
 RDEPEND="${DEPEND}"
 
