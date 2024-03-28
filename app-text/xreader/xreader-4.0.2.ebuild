@@ -12,7 +12,7 @@ SRC_URI="https://mirror.ghproxy.com/https://github.com/cailong-dot/gentoo-other/
 LICENSE="GPL-2.0"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE="+comics +djvu +dvi +pdf +introspection +postscript +tiff +xps +mathjax +pixbuf -epub"
+IUSE="dbus pdf ps thumbnailer previewer  print kering tiff xps -pixbuf -comics -epub -mathjax -docs -introspection -debug -dvi -t1lib -djvu"
 
 DEPEND="
 	app-accessibility/at-spi2-core:2
@@ -20,7 +20,8 @@ DEPEND="
 	dev-libs/libxml2:2
 	sys-libs/zlib:=
 	x11-libs/cairo
-	media-libs/t1lib
+	dev-util/intltool
+	
 	comics? ( app-arch/libarchive:= )
 	app-text/poppler:=[cairo,tiff,introspection]
 	djvu? ( app-text/djvu:= )
@@ -28,6 +29,7 @@ DEPEND="
 	dvi? (
 		app-text/libspectre:=
 		dev-libs/kpathsea:=
+		media-libs/t1lib
 	)
 	introspection? ( dev-libs/gobject-introspection:= )
 	postscript? ( app-text/libspectre:= )
@@ -59,19 +61,51 @@ src_configure() {
 	local emesonargs=(
 		--prefix=/usr
 		-Dbuildtype=plain
-  		-Ddeprecated_warnings=false
-		-Dcomics=true
-		-Ddjvu=true
-		-Ddvi=true
-		-Dt1lib=true
-		-Dpixbuf=true
-  		-Dintrospection=true
+		-Denable_dbus=true
+		-Dpdf=true
+		-Dps=true
+		-Dthumbnailer=true
+		-Dpreviewer=true
+		-Dgtk_unix_print=true
+		-Dkering=true
+		-Dtiff=true
+		-Dxps=true
 	)
-	if use !epub; then
-		emesonargs+=( -Depub=false )
+
+	if use pixbuf; then
+		emesonargs+=( -Dpixbuf=true )
+	fi
+	if use bebug; then
+		emesonargs+=( 
+			-Ddebug=true
+			-Ddeprecated_warnings=true
+		 )
 	fi
 	if use mathjax; then
 		emesonargs+=( -Dmathjax-directory=/usr/share/mathjax )
+	fi
+	if use comics; then
+		emesonargs+=( -Dcomics=true )
+	fi
+	if use djvu; then
+		emesonargs+=( -Ddjvu=true )
+	fi
+	if use dvi; then
+		emesonargs+=( 
+			-Ddvi =true
+			-Dt1lib =true
+		)
+	fi
+	if use epub; then
+		emesonargs+=( -Depub=true )
+	fi
+	if use docs; then
+		emesonargs+=( -Ddocs=true )
+	fi
+	if use introspection; then
+		emesonargs+=( 
+			-Dintrospection =true
+		)
 	fi
 	meson_src_configure
 }
