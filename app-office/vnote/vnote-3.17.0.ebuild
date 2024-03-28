@@ -20,7 +20,6 @@ SLOT="0"
 IUSE=""
 
 DEPEND="
-	dev-qt/qttools:5=
 	dev-qt/qtsvg:5=
 	dev-qt/qttranslations:5=
 	dev-qt/qtwebengine:5=[webchannel,location,declarative]
