@@ -12,7 +12,7 @@ SRC_URI="https://mirror.ghproxy.com/https://github.com/cailong-dot/gentoo-other/
 LICENSE="GPL-2.0"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE="dbus pdf ps thumbnailer previewer  print kering tiff xps -pixbuf -comics -mathjax -epub -docs -introspection -debug -dvi -t1lib -djvu"
+IUSE="dbus +pdf +ps +thumbnailer +previewer  +print +kering +tiff +xps -pixbuf -comics -mathjax -epub -docs -introspection -debug -dvi -t1lib -djvu"
 
 DEPEND="
 	app-accessibility/at-spi2-core:2
