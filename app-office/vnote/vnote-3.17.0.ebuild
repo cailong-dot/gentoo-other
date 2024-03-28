@@ -20,15 +20,11 @@ SLOT="0"
 IUSE=""
 
 DEPEND="
-	=dev-qt/qtbase-5.15:5=
-	=dev-qt/qtwebchannel-5.15:5=
-	=dev-qt/qttools-5.15:5=
-	=dev-qt/qtsvg-5.15:5=
-	=dev-qt/qtlocation-5.15:5=
-	=dev-qt/qttranslations-5.15:5=
-	=dev-qt/qtwebengine-5.15:5=
-	=dev-qt/qtx11extras-5.15:5=
-	=dev-qt/qtdeclarative-5.15:5=
+	dev-qt/qttools-5.15:5=
+	dev-qt/qtsvg-5.15:5=
+	dev-qt/qttranslations-5.15:5=
+	dev-qt/qtwebengine-5.15:5=[webchannel,location,declarative]
+	dev-qt/qtx11extras-5.15:5=
 "
 RDEPEND="${DEPEND}"
 
