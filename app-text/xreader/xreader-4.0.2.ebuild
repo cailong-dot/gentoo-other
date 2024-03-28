@@ -12,7 +12,7 @@ SRC_URI="https://mirror.ghproxy.com/https://github.com/cailong-dot/gentoo-other/
 LICENSE="GPL-2.0"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE="dbus pdf ps thumbnailer previewer  print kering tiff xps -pixbuf -comics -epub -mathjax -docs -introspection -debug -dvi -t1lib -djvu"
+IUSE="dbus pdf ps thumbnailer previewer  print kering tiff xps -pixbuf -comics -mathjax -epub -docs -introspection -debug -dvi -t1lib -djvu"
 
 DEPEND="
 	app-accessibility/at-spi2-core:2
@@ -32,7 +32,7 @@ DEPEND="
 		media-libs/t1lib
 	)
 	introspection? ( dev-libs/gobject-introspection:= )
-	postscript? ( app-text/libspectre:= )
+	ps? ( app-text/libspectre:= )
 	tiff? ( media-libs/tiff:= )
 	xps? ( app-text/libgxps:= )
 
@@ -67,7 +67,7 @@ src_configure() {
 		-Dthumbnailer=true
 		-Dpreviewer=true
 		-Dgtk_unix_print=true
-		-Dkering=true
+		-Dkeyring=true
 		-Dtiff=true
 		-Dxps=true
 	)
@@ -75,14 +75,18 @@ src_configure() {
 	if use pixbuf; then
 		emesonargs+=( -Dpixbuf=true )
 	fi
-	if use bebug; then
+	if use debug; then
 		emesonargs+=( 
 			-Ddebug=true
 			-Ddeprecated_warnings=true
 		 )
 	fi
+	if use !epub; then
+		emesonargs+=( -Depub=false )
+	fi
 	if use mathjax; then
 		emesonargs+=( -Dmathjax-directory=/usr/share/mathjax )
+		# emesonargs+=( -Dmathjax-directory=/usr/share/mathjax )
 	fi
 	if use comics; then
 		emesonargs+=( -Dcomics=true )
@@ -95,9 +99,6 @@ src_configure() {
 			-Ddvi =true
 			-Dt1lib =true
 		)
-	fi
-	if use epub; then
-		emesonargs+=( -Depub=true )
 	fi
 	if use docs; then
 		emesonargs+=( -Ddocs=true )
