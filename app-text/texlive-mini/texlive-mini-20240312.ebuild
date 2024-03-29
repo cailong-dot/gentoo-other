@@ -2,10 +2,13 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
-inherit toolchain-funcs
+# inherit toolchain-funcs
 DESCRIPTION="A lightweight, portable LaTeX distribution based on TeX Live."
 HOMEPAGE="https://yihui.org/tinytex"
-SRC_URI="https://mirror.ghproxy.com/https://github.com/cailong-dot/gentoo-other/releases/download/%E8%87%AA%E7%94%A8/texlive-mini-20240312.tar.gz"
+SRC_URI="
+    https://mirror.ghproxy.com/https://github.com/cailong-dot/gentoo-other/releases/download/%E8%87%AA%E7%94%A8/texlive-mini-20240312.tar.gz
+    https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/tlnet/install-tl-unx.tar.gz
+"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -29,7 +32,10 @@ S="${WORKDIR}/${P}"
 # }
 
 src_compile() {
-    emake
+    # emake
+    # "${WORKDIR}/${rust_stage0}"/install.sh --disable-ldconfig \
+	# 		--without=rust-docs-json-preview,rust-docs --destdir="
+    ./install-base.sh
 }
 
 # src_install() {
