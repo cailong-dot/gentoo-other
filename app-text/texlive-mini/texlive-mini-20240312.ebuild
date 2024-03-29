@@ -16,7 +16,8 @@ IUSE=""
 # RDEPEND="${DEPEND}"
 # BDEPEND=""
 
-S="${WORKDIR}"
+# S="${WORKDIR}"
+S="${WORKDIR}/${P}"
 
 # src_configure() {
 # 	local dest="/opt/tinytex"
