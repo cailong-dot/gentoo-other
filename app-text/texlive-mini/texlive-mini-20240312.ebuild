@@ -31,6 +31,6 @@ S="${WORKDIR}/${P}"
 # }
 
 
-src_install() {
+pkg_config() {
         emake
 }
