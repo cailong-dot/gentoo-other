@@ -1,13 +1,13 @@
 DEFINED_PHASES=configure postinst postrm setup
-DEPEND=>=dev-qt/qtcore-5.9:5= >=dev-qt/qtwebengine-5.9:5= >=dev-qt/qtsvg-5.9:5=
+DEPEND==dev-qt/qtbase-5.15:5= =dev-qt/qtwebchannel-5.15:5= =dev-qt/qttools-5.15:5= =dev-qt/qtsvg-5.15:5= =dev-qt/qtlocation-5.15:5= =dev-qt/qttranslations-5.15:5= =dev-qt/qtwebengine-5.15:5= =dev-qt/qtx11extras-5.15:5= =dev-qt/qtdeclarative-5.15:5=
 DESCRIPTION=A Vim-inspired note taking application that knows programmers and Markdown better
 EAPI=8
 HOMEPAGE=https://github.com/tamlok/vnote
 INHERIT=qmake-utils xdg-utils
-KEYWORDS=~amd64 ~arm ~arm64 ~x86
+KEYWORDS=~amd64
 LICENSE=MIT
-RDEPEND=>=dev-qt/qtcore-5.9:5= >=dev-qt/qtwebengine-5.9:5= >=dev-qt/qtsvg-5.9:5=
+RDEPEND==dev-qt/qtbase-5.15:5= =dev-qt/qtwebchannel-5.15:5= =dev-qt/qttools-5.15:5= =dev-qt/qtsvg-5.15:5= =dev-qt/qtlocation-5.15:5= =dev-qt/qttranslations-5.15:5= =dev-qt/qtwebengine-5.15:5= =dev-qt/qtx11extras-5.15:5= =dev-qt/qtdeclarative-5.15:5=
 SLOT=0
 SRC_URI=https://mirror.ghproxy.com/https://github.com/cailong-dot/gentoo-other/releases/download/vnote-full-src/vnote-3.17.0.tar.gz
 _eclasses_=toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	qmake-utils	a8dd17b1d94586164f5e3fc12b1c6b81	xdg-utils	baea6080dd821f5562d715887954c9d3
-_md5_=c2467ada925f119b85eec796b179f9b1
+_md5_=09754468c61e02791d79e95d6699bda8

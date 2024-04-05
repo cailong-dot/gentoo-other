@@ -1,0 +1,16 @@
+BDEPEND=virtual/pkgconfig >=dev-build/meson-1.2.3 app-alternatives/ninja dev-build/meson-format-array >=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=compile configure install postinst postrm preinst prepare test unpack
+DEPEND=app-accessibility/at-spi2-core:2 dev-libs/glib:2 dev-libs/libxml2:2 sys-libs/zlib:= x11-libs/cairo media-libs/t1lib comics? ( app-arch/libarchive:= ) app-text/poppler:=[cairo,tiff,introspection] djvu? ( app-text/djvu:= ) mathjax? ( dev-libs/mathjax:= ) dvi? ( app-text/libspectre:= dev-libs/kpathsea:= ) introspection? ( dev-libs/gobject-introspection:= ) postscript? ( app-text/libspectre:= ) tiff? ( media-libs/tiff:= ) xps? ( app-text/libgxps:= ) x11-libs/xapp x11-libs/gtk+:3[cups,introspection] pixbuf? ( x11-libs/gdk-pixbuf:=[tiff] ) dev-libs/libxslt mate-base/mate-common app-crypt/libsecret app-text/yelp-tools epub? ( >=net-libs/webkit-gtk-2.41 )
+DESCRIPTION=A generic Document Reader
+EAPI=8
+HOMEPAGE=https://github.com/linuxmint/xreader
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
+INHERIT=meson xdg git-r3
+IUSE=+comics +djvu +dvi +pdf +introspection +postscript +tiff +xps +mathjax +pixbuf -epub
+KEYWORDS=~amd64 ~amd64-linux
+LICENSE=GPL-2.0
+PROPERTIES=live
+SLOT=0
+SRC_URI=https://mirror.ghproxy.com/https://github.com/cailong-dot/gentoo-other/releases/download/%E8%87%AA%E7%94%A8/xreader-4.0.2.tar.gz
+_eclasses_=toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	24c947ff5f858625cf0b33c15eed4425	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	2df4e452cea39a9ec8fb543ce059f8d6	python-utils-r1	8904b60325f22500b0c3ad4b68a42448	meson	56446e0ef4b4c9af0e2dd4cdef1a086e	xdg-utils	baea6080dd821f5562d715887954c9d3	xdg	4a14c5c24f121e7da66e5aab4a168c6e	git-r3	86fa1f157b70b9d2ff340c4633b1cf4b
+_md5_=3bea664370cb4ebcd78cc4b794977b37

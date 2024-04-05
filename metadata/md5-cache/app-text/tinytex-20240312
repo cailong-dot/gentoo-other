@@ -1,0 +1,8 @@
+DEFINED_PHASES=install
+DESCRIPTION=A lightweight, portable LaTeX distribution based on TeX Live.
+EAPI=8
+HOMEPAGE=https://yihui.org/tinytex
+KEYWORDS=~amd64
+LICENSE=GPL-2
+SLOT=0
+_md5_=1d09ed93f30d8a04bb15bb13ed9c94cb
